@@ -1,0 +1,9 @@
+/* This is supposed to grab style.css for editor. Not working. Why?
+*/
+
+@import url( 'style.css' );
+
+/* Add overwrites as needed so that the content of the editor field is attractive and not broken */
+body { 
+	padding: 0;
+} 

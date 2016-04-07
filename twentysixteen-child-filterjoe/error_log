@@ -1,0 +1,4 @@
+[01-Mar-2016 05:56:33 America/Denver] PHP Fatal error:  Call to undefined function add_action() in /home1/filterjo/public_html/wp-content/themes/twentysixteen-child-filterjoe/functions.php on line 24
+[01-Mar-2016 05:56:33 America/Denver] PHP Fatal error:  Call to undefined function has_nav_menu() in /home1/filterjo/public_html/wp-content/themes/twentysixteen-child-filterjoe/footer.php on line 16
+[13-Mar-2016 11:21:16 America/Denver] PHP Fatal error:  Call to undefined function add_action() in /home1/filterjo/public_html/wp-content/themes/twentysixteen-child-filterjoe/functions.php on line 24
+[13-Mar-2016 11:21:16 America/Denver] PHP Fatal error:  Call to undefined function has_nav_menu() in /home1/filterjo/public_html/wp-content/themes/twentysixteen-child-filterjoe/footer.php on line 16

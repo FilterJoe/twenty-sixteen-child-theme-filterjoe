@@ -1,0 +1,238 @@
+/*
+ Theme Name:   Twenty Sixteen Child FilterJoe
+ Theme URI:    http://www.filterjoe.com/public_html/wp-content/themes/twenty-sixteen-child-filterjoe/
+ Description:  Twenty Sixteen Child Theme for FilterJoe site
+ Author:       Joe Golton
+ Author URI:   http://www.filterjoe.com
+ Template:     twentysixteen
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  twenty-sixteen-child-filterjoe
+*/
+
+/* ************************************************************************************************ 
+   This section styles the site to better go with my color scheme and minimalist look
+   First two styling changes get rid of the background border.
+   Note that some site customization was done using theme "customize" menu. For example,
+   I changed secondary color from #686868 to #698B69, but it isn't in style.css
+   ************************************************************************************************ */
+
+.site {
+	margin: 0;
+}
+
+/*  This next bit turned out to be unnecessary
+body.custom-background {
+	background-color: #FBF5E6 !important;
+}
+    Because the following bit of CSS does the job, and much better!
+*/
+
+body:not(.custom-background-image):before,
+	body:not(.custom-background-image):after {
+		height: 0px !important;
+	}
+
+a:hover {
+	color: red;
+}
+
+p {
+	color: black;
+}
+
+.entry-content h4,
+.entry-summary h4,
+.comment-content h4,
+.textwidget h4 {
+	letter-spacing: normal;
+	text-transform: none;
+}
+
+.entry-title h2, a {
+	font-family: Merriweather, Georgia, Times, serif;
+}
+
+.entry-title {
+	font-family: Merriweather, Georgia, Times, serif;
+}
+
+.widget-title {
+	color: #698B69;
+}
+
+.widget {
+	border: none;
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+
+
+/* To get rid of underlined links in text widgets, text decoration didn't work nor did bottom-border.
+   Turns out Wordpress Twenty Sixteen theme uses box-shadow! This is the first I heard of it . . .
+*/
+.widget a {
+	box-shadow: none;
+}
+
+caption { 
+    	text-align: center;
+	font-weight: 900;
+	font-size: 1.2em;
+}
+
+/* ************************************************************************************************
+   I want code or CSS snippets to have gray background. If I want wrapping, I'll have to put in:
+   white-space: pre-wrap;
+
+   ************************************************************************************************ */
+pre {
+	background: #e1dccf;
+	border-color: #698B69;
+	font-size: 80%;
+}
+
+/* ************************************************************************************************ 
+   Following CSS to get the menus to align left on very wide displays or windows
+   This is a BAD BAD solution as it only works based on the never-changing names, font,
+   and width of the particular menu item names I have right now. Will need to change
+   every time menu item names, font, or width is changed in any way. Maybe someday I'll think of
+   a more elegant way to do this.
+   ************************************************************************************************ */
+
+@media screen and (min-width: 75em) {
+	.site-header-menu {
+		padding-right: 20px;
+	}
+}
+
+
+/* ************************************************************************************************ 
+   Following CSS gets my Branding the way I like in the banner and menu areas
+   ************************************************************************************************ */
+
+.menu-item a {
+	color: #698B69;
+}
+
+.site-header {
+	padding-top: 24px;
+	padding-bottom: 24px;
+}
+
+.site-title {
+	background-color: #698B69;
+	color: #FBF5E6;
+}
+
+.site-branding .site-title a {
+	color: #FBF5E6;
+	font-family: Merriweather, Georgia, Times, serif;
+	font-size: 24px;
+	font-size: 3.4rem;
+	font-weight: 700;
+	padding: .1em;
+}
+
+.site-info .site-title a {
+	color: #FBF5E6;
+}
+.site-description {
+	font-family: Merriweather, Georgia, Times, serif;
+	background-color: #698B69;
+	color: #000000;
+	color: #FBF5E6 !important;
+	font-size: 13px;
+	font-size: 1.4rem;
+	font-weight: 400;
+	line-height: 1.0769230769;
+	margin: .538461538em 0 0;
+	margin: 0;
+	padding: .5em .1em .1em .3em;
+}
+
+
+
+/* ************************************************************************************************ 
+   Getting the search box to match my FilterJoe Colors
+   ************************************************************************************************ */
+
+#cse-search-box input[type="text"]{
+	background: #FBF5E6 !important;
+	border-color: #698B69 !important;
+}
+
+#cse-search-box input[type="submit"] {
+	background-color: #698B69;
+}
+
+#cse-search-box input {
+	padding: 6px;
+}
+
+
+/* ************************************************************************************************ 
+   Changes share button color and text to match my theme colors
+   ************************************************************************************************ */
+
+a.sd-button.share-more  {
+	background: #698B69 !important;
+}
+
+a.sharing-anchor span {
+	color: #FBF5E6 !important;
+}
+
+a.sharing-anchor::before {
+	color: #FBF5E6 !important;
+}
+
+span.cat-links {
+	font-weight: bold !important;
+}
+
+/* ************************************************************************************************ 
+   I think 16px font on phone is too big. iPhone 6 viewport size is 375px. Anything bigger and
+   I'm happy to stick with default 16px size. Title font size isn't reduced.
+   Right now this is turned off by having it at 16px. To turn on, change to 13 px.
+   I did test at https://www.google.com/webmasters/tools/mobile-friendly with font set at 13px
+   and it passed, but I'm still a little nervous that Google might prefer 16px over 13px.
+   ************************************************************************************************ */
+
+@media screen and (max-width: 375px) {
+	body {
+		font-size: 16px;
+	}
+}
+
+/* ************************************************************************************************ 
+   Updated (date last modified) is hidden by default. This unhides it. But I also had to make
+   changes to twentysixteen_entry_date() in function.php in order to fix the ugly mess.
+   I guess the twentysixteen creators didn't anticipate someone doing this.
+   ************************************************************************************************ */
+
+.updated:not(.published) {
+	display: inline;
+}
+
+
+/* Do I want a line under FilterJoe branding?
+
+.site-header-main {	 	 
+ border: solid #698B69;	 	 
+ border-width: 0 0 12px;	 	 
+}
+
+*/
+
+/* Old theme had background all the way across banner but didn't look good with twenty sixteen
+
+.site-header-main {
+	background-color: #698B69;
+}
+*/
