@@ -2,7 +2,9 @@
 A wordpress child theme of the Twenty Sixteen theme (for FilterJoe site)
 
 Upload date: 4/7/16
+
 Requirements: First install Wordpress 4.4 or higher and Twenty Sixteen theme
+
 web site: www.filterjoe.com
 
 see http://www.filterjoe.com/2015/12/23/grinch-changed-to-the-twentysixteen-wordpress-theme/
