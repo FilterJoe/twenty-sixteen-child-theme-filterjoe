@@ -11,9 +11,15 @@ for discussion of this theme
 Plugins that also impact the appearance of FilterJoe (some of these require setting up widgets)
 
 Advanced Most Recent Posts
+
 Better RSS Feeds (only noticeable if you click on one of the RSS icons)
+
 Google Doc Embedder (for posts that embed Google Docs)
+
 Jetpack by WordPress.com (the sharing button)
+
 Subscribe / Connect / Follow Widget
+
 Widget Context
+
 WP Hide Post
